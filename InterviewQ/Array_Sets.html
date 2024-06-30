@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sets</title>
+    
+</head>
+
+<body>
+<div>This is JS</div>
+<script>
+//=======Swaping the elements=============
+// let arr = [1, 2, 3, 4, 5];
+// let i = 1; // Index of the first element to swap
+// let j = 3; // Index of the second element to swap
+
+// // Print the array before swapping
+// console.log('Before swapping:', arr);
+
+// // Step 1: Use a temporary variable to hold the value of arr[i]
+// let temp = arr[i];
+
+// // Step 2: Assign the value of arr[j] to arr[i]
+// arr[i] = arr[j];
+
+// // Step 3: Assign the value stored in the temporary variable to arr[j]
+// arr[j] = temp;
+
+// // Print the array after swapping
+// console.log('After swapping:', arr);
+
+
+  //======Finding max/largest element in array============
+//   const arr = [5, 4, 3, 2, 1, 6];
+
+// function findMax(arr) {
+//   let max = arr[0];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+
+//   return max;
+// }
+// console.log(findMax(arr))
+
+//====Sum of all elements of an array=====
+
+// const arr = [4, 3, 7, 22, 1, 16];
+
+// function showSum(arr) {
+//   let sum= 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+            
+//   }
+// return sum;
+// }
+// console.log(showSum(arr))
+
+//===========Reverse an Array While Loop============
+// const arr = [9, 2, 7, 1, 8, 3];
+
+// function reverse(arr) {
+//   let left = 0;
+//   let right = arr.length - 1;
+  
+//   while (left < right) {
+//     // Swap elements
+//     let temp = arr[left];
+//     arr[left] = arr[right];
+//     arr[right] = temp;
+    
+//     // Move towards the center
+//     left++;
+//     right--;
+//   }
+  
+//   return arr;
+// }
+
+// console.log(reverse(arr)); // Output: [3, 8, 1, 7, 2, 9]
+
+//==============Count Occurrences of an Element in an Array===============
+
+// function countOccurrences(arr, target) {
+//   let count = 0; // Initialize count to 0
+//   for (let i = 0; i < arr.length; i++) { // Loop through each element of the array
+//     if (arr[i] === target) { // Check if the current element is equal to the target
+//       count++; // Increment the count if the element matches the target
+//     }
+//   }
+//   return count; // Return the total count of occurrences
+// }
+
+// // Example usage:
+// const array = [1, 2, 3, 4, 1, 2, 1, 5, 1];
+// const targetElement = 1;
+// console.log(countOccurrences(array, targetElement)); // Output: 4
+
+
+//===============Remove Duplicates from an Array=====================
+
+// function removeDuplicates(arr) {
+//   let uniqueArr = []; // Initialize an empty array to store unique elements
+
+//   for (let i = 0; i < arr.length; i++) { // Loop through each element in the input array
+//     if (uniqueArr.indexOf(arr[i]) === -1) { // Check if the element is not already in the unique array
+//       uniqueArr[uniqueArr.length] = arr[i]; // Add the element to the unique array using direct assignment
+//     }
+//   }
+
+//   return uniqueArr; // Return the array with duplicates removed
+// }
+
+// // Example usage:
+// const array = [1, 7, 4, 4, 9, 2, 3, 5, 1];
+// console.log(removeDuplicates(array)); // Output: [1, 2, 3, 4, 5]
+
+
+//==============Insertion===================
+//=============Insert at a Specific Index=================
+
+// function insertAtIndex(arr, index, value) {
+//   debugger; // Start of function
+//   for (let i = arr.length; i > index; i--) {
+//     debugger; // Inside loop, before shifting elements
+//     arr[i] = arr[i - 1];
+//   }
+//   arr[index] = value;
+//   debugger; // After insertion
+// }
+
+// let arr1 = [1, 2, 3, 4];
+// insertAtIndex(arr1, 2, 10);
+// console.log(arr1); // Output: [1, 2, 10, 3, 4]
+
+//=============== Delete at a Specific Index=================
+
+// function deleteAtIndex(arr, index) {
+//   for (let i = index; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr.length = arr.length - 1;
+// }
+
+// let arr1 = [1, 2, 3, 4];
+// deleteAtIndex(arr1, 2);
+// console.log(arr1); // Output: [1, 2, 4]
+
+//===============Delete the First element=============
+
+// function deleteFirstElement(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr.length = arr.length - 1;
+// }
+
+// let arr2 = [1, 2, 3, 4];
+// deleteFirstElement(arr2);
+// console.log(arr2); // Output: [2, 3, 4]
+
+
+//===================Delete the last=============
+
+// function deleteLastElement(arr) {
+//   arr.length = arr.length - 1;
+// }
+
+// let arr3 = [1, 2, 3, 4];
+// deleteLastElement(arr3);
+// console.log(arr3); // Output: [1, 2, 3]
+
+//=================Delete All Occurrences of a Value==============
+
+// function deleteAllOccurrences(arr, value) {
+//   let k = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== value) {
+//       arr[k++] = arr[i];
+//     }
+//   }
+//   arr.length = k;
+// }
+
+// let arr4 = [1, 2, 3, 2, 4];
+// deleteAllOccurrences(arr4, 2);
+// console.log(arr4); // Output: [1, 3, 4]
+
+//================Linear Search==================
+
+// function linearSearch(arr, value) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === value) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// let arr1 = [1, 2, 3, 4, 5];
+// console.log(linearSearch(arr1, 3)); // Output: 2
+// console.log(linearSearch(arr1, 6)); // Output: -1
+
+
+//==============Find Maximum value=================
+
+// function findMax(arr) {
+//   if (arr.length === 0) return -1;
+  
+//   let max = arr[0];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+
+// let arr4 = [1, 3, 7, 4, 5];
+// console.log(findMax(arr4)); // Output: 7
+
+//=============Create an Array=========
+
+// const size = 5;
+// const arr = [];
+
+// for(let i=0; i<size; i++)
+// {
+//   arr[arr.length] = i
+// }
+
+// console.log(arr);
+
+//===========Find the first 100 prime numbers==================
+// debugger;
+// for(let i=2; i<=100; i++){
+//   let flag = 0;
+//   console.log(i)
+//   for(j=2; j<=i/2; j++){
+//     if(i%j==0)
+//     {                ==================Doubt====================
+//       flag = 1;
+//       break;
+//     }
+//   }
+//   if(flag==0){
+//     document.write(i+"<br>");
+//   }
+// }
+
+
+//================Find the second largest number in an Array=============================
+
+// const arr = [2,6,8,1,5,18,23,19]
+
+// let large = arr[0];
+// let secLarge = arr[0];
+
+// for(let i=0; i < arr.length; i++){
+//   if(arr[i]> large){
+//     secLarge = large;
+//     large = arr[i]
+//   }
+//   else if(arr[i] > secLarge && arr[i] !== large) {
+//     secLarge = arr[i];
+//   }
+// }
+// console.log(secLarge)
+
+// //===========Explaination==============
+// Consider the array [2, 6, 8, 3, 5, 18, 23, 19]:
+
+// Start with large = 2 and secLarge = 2.
+
+// Iteration 1 (i = 0):
+
+// arr[0] = 2 (initial values, nothing changes).
+// Iteration 2 (i = 1):
+
+// arr[1] = 6:
+// 6 > 2 → secLarge = 2, large = 6.
+// Iteration 3 (i = 2):
+
+// arr[2] = 8:
+// 8 > 6 → secLarge = 6, large = 8.
+// Iteration 4 (i = 3):
+
+// arr[3] = 3:
+// 3 is not greater than 8, and not greater than 6, so no change.
+// Iteration 5 (i = 4):
+
+// arr[4] = 5:
+// 5 is not greater than 8, and not greater than 6, so no change.
+// Iteration 6 (i = 5):
+
+// arr[5] = 18:
+// 18 > 8 → secLarge = 8, large = 18.
+// Iteration 7 (i = 6):
+
+// arr[6] = 23:
+// 23 > 18 → secLarge = 18, large = 23.
+// Iteration 8 (i = 7):
+
+// arr[7] = 19:
+// 19 is not greater than 23, but 19 > 18 → secLarge = 19.
+
+
+//================Revers an String===========
+// const str = 'Nazim'
+// let reversedStr = '';
+  
+//   // Loop through the string from the end to the beginning
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversedStr += str[i];
+//   }
+  
+// console.log(reversedStr);
+
+//============Find missing number in array=================
+// debugger;
+// let arr = [1,2,3,5,6];
+// let total = ((arr.length + 1) * (arr.length + 2))/2;
+
+// for(i=0; i<arr.length; i++){
+//   total = total - arr[i];
+// }
+// console.log(total);
+
+
+//============Find intersection of two array====================
+
+// function findIntersection(arr1, arr2) {
+//     let intersection = [];
+
+//     // Loop through the elements of the first array
+//     for (let i = 0; i < arr1.length; i++) {
+//         // Check if the current element is in the second array and not already in the intersection array
+//         if (arr2.includes(arr1[i]) && !intersection.includes(arr1[i])) {
+//             intersection.push(arr1[i]);
+//         }
+//     }
+
+//     return intersection;
+// }
+
+// // Example usage:
+// let array1 = [1, 2, 3, 4, 5];
+// let array2 = [4, 5, 6, 7, 8];
+// let intersection = findIntersection(array1, array2);
+// console.log("The intersection is: " + intersection); // Output: The intersection is: 4,5
+
+// //===========Explanation========================================
+
+// 1.Create an empty array to store the intersection elements.
+// 2.Loop through the elements of the first array.
+// 3.For each element in the first array, check if it exists in the second array.
+// 4.If the element exists in the second array and is not already in the intersection array, add it to the intersection array.
+
+</script>
+</body>
+</html>

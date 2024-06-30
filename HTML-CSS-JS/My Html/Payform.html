@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: lightcyan;
+            border-radius: 10px;
+        }
+        h1{
+        background-color: lightpink;
+        }
+        .Pay{
+            background-color: greenyellow;
+            width: 10%;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px;
+            font-size: larger;
+            cursor: pointer;
+            
+        }
+        .Pay:hover{
+                background-color: green;
+            }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1 align="center" >Payment Form</h1>
+        <h2>Contach Info</h2>
+        <p>Name* : <input type="text" name="Name" required> </p>
+        <fieldset>
+          <legend>Gender</legend>
+        <p>Male <input type="radio" name="gender"> female <input type="radio" name="gender"></p>
+      </fieldset>
+      
+      <p> <legend>Adress :</legend> <textarea name="address" id="address" cols="60" rows="10"></textarea></p>
+      
+      <p>Email : <input type="email" name="email" id="email"></p>
+      <p>Phone No. : <input type="number" name="phn" id="phn"></p>
+      <p>Pincode : <input type="number" name="pin" id="pin"></p>
+      <h2>Payment info</h2>
+      <p>Card Type :
+        <select name="card" id="card">
+        <option value="">--select card--</option>
+        <option value="Visa">Visa</option>
+        <option value="Rupay">Rupay</option>
+      </select>
+    </p>
+      <p>Card Number : <input type="number" name="card no" id="card no"></p>
+      <p>Expiration Date : <input type="date" name="expr" id="expr"></p>
+      <p>CVV : <input type="password" name="cvv" id="cvv"></p>
+      <input class="Pay" type="submit" value="Pay Now">
+        
+      </form>
+</body>
+</html>
