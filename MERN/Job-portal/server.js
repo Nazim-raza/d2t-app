@@ -1,5 +1,5 @@
 //imports packages
-// const express = require('express') // this require syntax is commonjs type for nodejs
+//const express = require('express') // this require syntax is commonjs type for nodejs
 
 import express from "express";
 import dotenv from "dotenv";
